@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Routing\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +17,7 @@ Route::get('/contact','HomeController@contact')->name('contact');
 
 //Shop
 Route::get('/shop','HomeController@shop')->name('shop.index');
-Route::get('/shop/single-product','HomeController@shopShow')->name('shop.show');
+Route::get('/shop/single-product','HomeController@product')->name('shop.show');
 
  // Cart
  Route::get('/cart','HomeController@cart')->name('cart.index');
