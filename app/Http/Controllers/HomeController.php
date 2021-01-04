@@ -30,6 +30,14 @@ class HomeController extends Controller
     {
         return view('cart');
     }
+    public function checkout()
+    {
+        return view('checkout');
+    }
+    public function success()
+    {
+        return view('success');
+    }
 
     public function product()
     {
