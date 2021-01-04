@@ -30,7 +30,7 @@
                         </li>
                         <li class="nav-item"><a class="nav-link" href="contact.html"> <i class="fas fa-truck"></i> Orders</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html"> <i class="fas fa-sign-out-alt"></i> Logout</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html"> <i class="fab fa-opencart"></i> Cart</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('cart.index') }}"> <i class="fab fa-opencart"></i> Cart</a></li>
                     </ul>
                 </div>
             </div>
