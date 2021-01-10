@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -12,8 +13,11 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function home()
-    {
-        return view('home');
+    {   $products = Product::inRandomOrder()->take(8)->get();
+        //dd($products);
+        return view('home',[
+            'products' =>$products
+        ]);
     }
 
     public function contact()
