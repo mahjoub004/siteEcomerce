@@ -28,7 +28,7 @@
                             <a href="#" class="nav-link "
                              aria-expanded="false"><i class="fas fa-sign-in-alt"></i> login</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html"> <i class="fas fa-truck"></i> Orders</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('orders') }}"> <i class="fas fa-truck"></i> Orders</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html"> <i class="fas fa-sign-out-alt"></i> Logout</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('cart.index') }}"> <i class="fab fa-opencart"></i> Cart</a></li>
                     </ul>
