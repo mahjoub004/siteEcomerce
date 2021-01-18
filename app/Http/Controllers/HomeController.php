@@ -24,12 +24,6 @@ class HomeController extends Controller
     {
         return view('contact');
     }
-
-    public function shop()
-    {
-        return view('shop');
-    }
-
     public function cart()
     {
         return view('cart');
@@ -42,12 +36,6 @@ class HomeController extends Controller
     {
         return view('success');
     }
-
-    public function product()
-    {
-        return view('product');
-    }
-    
     public function orders()
     {
         return view('orders');
