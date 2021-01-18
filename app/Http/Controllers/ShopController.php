@@ -15,8 +15,10 @@ class ShopController extends Controller
      */
     public function index()
     {   $products = Product::all();
+        $category = Category::all();
         return view('shop',[
-            'products' => $products
+            'products' => $products,
+            'categories' => $category
         ]);
     }
     /**
@@ -27,11 +29,10 @@ class ShopController extends Controller
      */
     public function show($slug)
     {   $product = Product::where('slug',$slug)->firstOrFail();
-        $category = Category::where('id',$product->category_id)->firstOrFail();
+       
         //dd($product);
         return view('product',[
             'product' => $product,
-            'category' =>  $category
             ]);
     }
 

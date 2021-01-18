@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    public function categoryId()
+    public function category()
     {
-        return $this->belongsTo('App\Categroy');
+        return $this->belongsTo('App\Category');
     }
 }
