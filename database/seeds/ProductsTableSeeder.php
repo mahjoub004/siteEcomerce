@@ -1,5 +1,6 @@
 <?php
 
+use App\Category;
 use App\Product;
 use Illuminate\Database\Seeder;
 
@@ -20,6 +21,7 @@ class ProductsTableSeeder extends Seeder
             'description' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta accusantium, eveniet, minima earum doloremque iste officiis dolorum sequi temporibus atque repudiandae sint non corrupti eum voluptas voluptatibus necessitatibus dolorem totam.
             Quasi laborum possimus aliquid ex consequatur illo laudantium dolores dignissimos aut numquam porro quia, voluptatibus doloremque quibusdam dicta aperiam voluptatum. Tenetur, placeat accusamus. Mollitia, itaque. Ipsum ea optio doloremque laborum?
             Accusamus voluptatem ipsum veritatis fugiat eaque, facere qui nobis veniam sunt unde nulla rem obcaecati, sit repellendus. Est, suscipit voluptatibus earum cupiditate nihil qui labore? Molestias minus omnis velit odio!',
+            'category_id' => Category::all()->random()->id
         ]);
 
         Product::create([
@@ -30,7 +32,8 @@ class ProductsTableSeeder extends Seeder
             'description' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta accusantium, eveniet, minima earum doloremque iste officiis dolorum sequi temporibus atque repudiandae sint non corrupti eum voluptas voluptatibus necessitatibus dolorem totam.
             Quasi laborum possimus aliquid ex consequatur illo laudantium dolores dignissimos aut numquam porro quia, voluptatibus doloremque quibusdam dicta aperiam voluptatum. Tenetur, placeat accusamus. Mollitia, itaque. Ipsum ea optio doloremque laborum?
             Accusamus voluptatem ipsum veritatis fugiat eaque, facere qui nobis veniam sunt unde nulla rem obcaecati, sit repellendus. Est, suscipit voluptatibus earum cupiditate nihil qui labore? Molestias minus omnis velit odio!',
-        ]);
+            'category_id' => Category::all()->random()->id
+            ]);
 
         Product::create([
             'name' => 'Mangue /Cerise',
@@ -40,7 +43,8 @@ class ProductsTableSeeder extends Seeder
             'description' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta accusantium, eveniet, minima earum doloremque iste officiis dolorum sequi temporibus atque repudiandae sint non corrupti eum voluptas voluptatibus necessitatibus dolorem totam.
             Quasi laborum possimus aliquid ex consequatur illo laudantium dolores dignissimos aut numquam porro quia, voluptatibus doloremque quibusdam dicta aperiam voluptatum. Tenetur, placeat accusamus. Mollitia, itaque. Ipsum ea optio doloremque laborum?
             Accusamus voluptatem ipsum veritatis fugiat eaque, facere qui nobis veniam sunt unde nulla rem obcaecati, sit repellendus. Est, suscipit voluptatibus earum cupiditate nihil qui labore? Molestias minus omnis velit odio!',
-        ]);
+            'category_id' => Category::all()->random()->id
+            ]);
 
         Product::create([
             'name' => 'Mangue / Orange',
@@ -50,7 +54,8 @@ class ProductsTableSeeder extends Seeder
             'description' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta accusantium, eveniet, minima earum doloremque iste officiis dolorum sequi temporibus atque repudiandae sint non corrupti eum voluptas voluptatibus necessitatibus dolorem totam.
             Quasi laborum possimus aliquid ex consequatur illo laudantium dolores dignissimos aut numquam porro quia, voluptatibus doloremque quibusdam dicta aperiam voluptatum. Tenetur, placeat accusamus. Mollitia, itaque. Ipsum ea optio doloremque laborum?
             Accusamus voluptatem ipsum veritatis fugiat eaque, facere qui nobis veniam sunt unde nulla rem obcaecati, sit repellendus. Est, suscipit voluptatibus earum cupiditate nihil qui labore? Molestias minus omnis velit odio!',
-        ]);
+            'category_id' => Category::all()->random()->id
+            ]);
 
         Product::create([
             'name' => 'Mangue / Poire',
@@ -60,7 +65,8 @@ class ProductsTableSeeder extends Seeder
             'description' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta accusantium, eveniet, minima earum doloremque iste officiis dolorum sequi temporibus atque repudiandae sint non corrupti eum voluptas voluptatibus necessitatibus dolorem totam.
             Quasi laborum possimus aliquid ex consequatur illo laudantium dolores dignissimos aut numquam porro quia, voluptatibus doloremque quibusdam dicta aperiam voluptatum. Tenetur, placeat accusamus. Mollitia, itaque. Ipsum ea optio doloremque laborum?
             Accusamus voluptatem ipsum veritatis fugiat eaque, facere qui nobis veniam sunt unde nulla rem obcaecati, sit repellendus. Est, suscipit voluptatibus earum cupiditate nihil qui labore? Molestias minus omnis velit odio!',
-        ]);
+            'category_id' => Category::all()->random()->id
+            ]);
 
         Product::create([
             'name' => 'Mangue / Pomme',
@@ -70,7 +76,8 @@ class ProductsTableSeeder extends Seeder
             'description' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta accusantium, eveniet, minima earum doloremque iste officiis dolorum sequi temporibus atque repudiandae sint non corrupti eum voluptas voluptatibus necessitatibus dolorem totam.
             Quasi laborum possimus aliquid ex consequatur illo laudantium dolores dignissimos aut numquam porro quia, voluptatibus doloremque quibusdam dicta aperiam voluptatum. Tenetur, placeat accusamus. Mollitia, itaque. Ipsum ea optio doloremque laborum?
             Accusamus voluptatem ipsum veritatis fugiat eaque, facere qui nobis veniam sunt unde nulla rem obcaecati, sit repellendus. Est, suscipit voluptatibus earum cupiditate nihil qui labore? Molestias minus omnis velit odio!',
-        ]);
+            'category_id' => Category::all()->random()->id
+            ]);
 
         Product::create([
             'name' => 'Mangue / Ananas',
@@ -80,7 +87,8 @@ class ProductsTableSeeder extends Seeder
             'description' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta accusantium, eveniet, minima earum doloremque iste officiis dolorum sequi temporibus atque repudiandae sint non corrupti eum voluptas voluptatibus necessitatibus dolorem totam.
             Quasi laborum possimus aliquid ex consequatur illo laudantium dolores dignissimos aut numquam porro quia, voluptatibus doloremque quibusdam dicta aperiam voluptatum. Tenetur, placeat accusamus. Mollitia, itaque. Ipsum ea optio doloremque laborum?
             Accusamus voluptatem ipsum veritatis fugiat eaque, facere qui nobis veniam sunt unde nulla rem obcaecati, sit repellendus. Est, suscipit voluptatibus earum cupiditate nihil qui labore? Molestias minus omnis velit odio!',
-        ]);
+            'category_id' => Category::all()->random()->id
+            ]);
 
         Product::create([
             'name' => 'Mangue / Banane',
@@ -90,6 +98,7 @@ class ProductsTableSeeder extends Seeder
             'description' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta accusantium, eveniet, minima earum doloremque iste officiis dolorum sequi temporibus atque repudiandae sint non corrupti eum voluptas voluptatibus necessitatibus dolorem totam.
             Quasi laborum possimus aliquid ex consequatur illo laudantium dolores dignissimos aut numquam porro quia, voluptatibus doloremque quibusdam dicta aperiam voluptatum. Tenetur, placeat accusamus. Mollitia, itaque. Ipsum ea optio doloremque laborum?
             Accusamus voluptatem ipsum veritatis fugiat eaque, facere qui nobis veniam sunt unde nulla rem obcaecati, sit repellendus. Est, suscipit voluptatibus earum cupiditate nihil qui labore? Molestias minus omnis velit odio!',
-        ]);
+            'category_id' => Category::all()->random()->id
+            ]);
     }
 }
