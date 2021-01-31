@@ -28,3 +28,8 @@ Route::get('/shop/{product}','ShopController@show')->name('shop.show');
 
  //Orders
  Route::get('/orders','HomeController@orders')->name('orders');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
