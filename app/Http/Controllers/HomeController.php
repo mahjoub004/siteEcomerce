@@ -8,38 +8,14 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Show the application dashboard.
      *
      * @return \Illuminate\Http\Response
      */
     public function home()
-    {   $products = Product::inRandomOrder()->take(8)->get();
-        //dd($products);
+    {   $products = Product::all();
         return view('home',[
-            'products' =>$products
+            'products' => $products
         ]);
     }
-
-    public function contact()
-    {
-        return view('contact');
-    }
-    public function cart()
-    {
-        return view('cart');
-    }
-    public function checkout()
-    {
-        return view('checkout');
-    }
-    public function success()
-    {
-        return view('success');
-    }
-    public function orders()
-    {
-        return view('orders');
-    }
-
-   
 }

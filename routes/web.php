@@ -12,6 +12,9 @@
 |
 */
 //Main page 
+
+use Illuminate\Support\Facades\Redirect;
+
 Route::get('/','HomeController@home')->name('home');
 Route::get('/contact','HomeController@contact')->name('contact');
 
@@ -33,3 +36,12 @@ Route::get('/shop/{product}','ShopController@show')->name('shop.show');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+//authentication
+Auth::routes();
+
+Route::get('/logout', function () {
+    auth()->logout();
+    session()->flush();
+    return Redirect::to('/');
+
+})->name('logout');
