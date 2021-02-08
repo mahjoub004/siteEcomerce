@@ -13,7 +13,8 @@ class CartController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   //dd(Cart::content());
+    {  // dd(Cart::content(),Cart::instance('save')->content());
+
         return view('cart');
     }
 
@@ -26,7 +27,7 @@ class CartController extends Controller
     public function store(Request $request)
     {   //dd($request);
         Cart::add($request->id, $request->name, 1, $request->price)->associate('App\Product');
-        return redirect()->route('cart.index')->with('success','Produit ajouté a votre panier !');
+        return redirect()->route('cart.index')->with('success','Product added to cart !');
 
     }
 
@@ -41,12 +42,21 @@ class CartController extends Controller
     public function destroy($id)
     {
         Cart::remove($id);
-        return back()->with('success','Le produit a bien été supprimé du panier !');
+        return back()->with('success','Product has been removed from cart !');
     }
 
     public function reset()
     {
         Cart::destroy();
+    }
+
+    public function save($id)
+    {
+        $item = Cart::get($id);
+        //dd($item);
+        Cart::remove($id);
+        Cart::instance('save')->add($item->id, $item->name, 1, $item->price)->associate('App\Product');
+        return redirect()->route('cart.index')->with('success','Product save for later !');
     }
 
 

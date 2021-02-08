@@ -72,6 +72,11 @@
                                     {{ method_field('DELETE') }}
                                     <button type="submit" class="btn btn-link">Remove</button>
                                 </form>
+
+                                <form action="{{ route('cart.save' ,$product->rowId )}}" method="POST">
+                                    {{ csrf_field() }}
+                                    <button type="submit" class="btn btn-link">Save for later</button>
+                                </form>
                             </td>
                         </tr>
                         @endforeach
@@ -119,6 +124,43 @@
                 <div class="d-flex justify-content-around">
                     <a class="gray_btn" href="{{ route('shop.index') }}">Continue Shopping</a>
                 </div>
+            @endif
+        </div>
+    </div>
+    <div class="single-product-slider">
+        <div class="container">
+            @if (Cart::instance('save')->count() > 0)
+                <h2 class="text-center my-5">{{ Cart::instance('save')->count() }} item(s) saved for later</h2>
+                <div class="row">
+                    @foreach (Cart::instance('save')->content() as $product)
+                        <div class="col-lg-3 col-md-6">
+                            <div class="single-product">
+                                <img class="img-fluid" src="{{ Voyager::image($product->model->image) }}" alt="" > 
+                                <div class="product-details">
+                                    <h6>{{ $product->model->name }}</h6>
+                                    <div class="price">
+                                        <h6>{{ $product->model->price }} €</h6>
+                                    </div>
+                                    <div class="prd-bottom">
+                                        <form action="{{ route('save.destroy' ,$product->rowId )}}" method="post">
+                                            {{ csrf_field() }}
+                                            {{ method_field('DELETE') }}
+                                         <button type="submit" class="btn btn-link">Remove</button>
+                                        </form>
+                                        <form action="{{ route('save.store' ,$product->rowId )}}" method="post">
+                                            {{ csrf_field() }}
+                                            
+                                            <button type="submit" class="btn btn-link">Move to cart</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                                       
+                        </div>
+                    @endforeach
+                </div>
+            @else
+            <h3 class="text-center">No item saved for later</h3>
             @endif
         </div>
     </div>
